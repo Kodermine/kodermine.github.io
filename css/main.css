@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url('fonts/proximanova-light-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('fonts/proximanova-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Proxima Nova SemiBold';
+    src: url('fonts/proximanova-semibold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body { 
+  background-color: #000000;
+  font-family: "Proxima Nova Regular", "Helvetica", sans-serif;
+}
+
+.section {
+    padding: 80px;
+}
+
+.main.section {
+    background: url('../images/main_section_background.jpg');
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    text-align: center;
+}
+.main.section img{
+    height: 250px;
+}
+.main.section h1{
+  font-family: "Proxima Nova SemiBold";
+  color: #6ecddd;
+  font-size: 3em;
+  margin: 50px 0 20px 0;
+}
+
+.main.section p{
+  color: #FFFFFF;
+  font-size: 1.5em;
+}
