@@ -24,29 +24,63 @@ body {
   font-family: "Proxima Nova Regular", "Helvetica", sans-serif;
 }
 
+/* Sections */
+
 .section {
-    padding: 80px;
+    padding: 60px;
+    text-align: center;
 }
 
+.section h1 {
+  font-family: "Proxima Nova SemiBold";
+  font-size: 3em;
+}
+
+.section p { 
+  font-size: 1.5em;
+  line-height: 1.8em; 
+}
+
+/* Main Section */
 .main.section {
     background: url('../images/main_section_background.jpg');
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    text-align: center;
 }
-.main.section img{
-    height: 250px;
-}
+.main.section img{ height: 250px; }
+
 .main.section h1{
-  font-family: "Proxima Nova SemiBold";
-  color: #6ecddd;
-  font-size: 3em;
   margin: 50px 0 20px 0;
+  color: #6ecddd;
 }
 
-.main.section p{
-  color: #FFFFFF;
-  font-size: 1.5em;
+.main.section p{ color: #FFFFFF; }
+
+/* About Section */
+
+.about.section { background: #6ecddd; }
+.about.section h1 { margin-bottom: 20px; }
+
+/* Social Media */
+.social_media.section h1 { margin-bottom: 40px; }
+.social_media.section { background: #fafafa; }
+.social_media.section img.social_media_icon {
+  padding: 50px;
+  width: 25%;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .social_media.section img.social_media_icon {
+    padding: 20px;
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 0px) and (max-width: 699px) {
+  .social_media.section img.social_media_icon {
+    padding: 10px;
+    width: 50%;
+  }
 }
