@@ -69,18 +69,19 @@ body {
 .social_media.section img.social_media_icon {
   padding: 50px;
   width: 25%;
+  max-width: 250px;
 }
 
 @media screen and (min-width: 700px) and (max-width: 1000px) {
   .social_media.section img.social_media_icon {
     padding: 20px;
-    width: 30%;
+    width: 20%;
   }
 }
 
 @media screen and (min-width: 0px) and (max-width: 699px) {
   .social_media.section img.social_media_icon {
     padding: 10px;
-    width: 50%;
+    width: 30%;
   }
 }
