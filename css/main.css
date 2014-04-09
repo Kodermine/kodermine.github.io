@@ -19,7 +19,7 @@
     font-style: normal;
 }
 
-body { 
+body {
   background-color: #000000;
   font-family: "Proxima Nova Regular", "Helvetica", sans-serif;
 }
@@ -34,11 +34,12 @@ body {
 .section h1 {
   font-family: "Proxima Nova SemiBold";
   font-size: 3em;
+  margin-bottom: 20px;
 }
 
-.section p { 
+.section p {
   font-size: 1.5em;
-  line-height: 1.8em; 
+  line-height: 1.8em;
 }
 
 /* Main Section */
@@ -52,7 +53,7 @@ body {
 .main.section img{ height: 250px; }
 
 .main.section h1{
-  margin: 50px 0 20px 0;
+  margin-top: 50px;
   color: #6ecddd;
 }
 
@@ -61,7 +62,13 @@ body {
 /* About Section */
 
 .about.section { background: #6ecddd; }
-.about.section h1 { margin-bottom: 20px; }
+
+.videos.section { background: #292E38; }
+.videos.section h1 { color: #6ecddd;}
+.videos.section > a > img{
+  margin: 20px;
+  width: 390px;
+}
 
 /* Social Media */
 .social_media.section h1 { margin-bottom: 40px; }
@@ -71,6 +78,7 @@ body {
   width: 20%;
   max-width: 250px;
 }
+
 
 @media screen and (min-width: 600px) and (max-width: 1000px) {
   .social_media.section img.social_media_icon {
@@ -84,9 +92,9 @@ body {
     font-size: 2em;
   }
 
-  .section p { 
+  .section p {
     font-size: 1.0em;
-    line-height: 1.5em; 
+    line-height: 1.5em;
   }
 
   .social_media.section img.social_media_icon {
