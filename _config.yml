@@ -1,15 +1,15 @@
 inc:
   # Blog Information
-  title:        "Jekyll Incorporated"
-  subtitle:     "Modern Jekyll based blog for companies"
+  title:        "KODERMINE"
+  subtitle:     "VIDEOS | LIVE HANGOUTS | CODE SESSIONS"
   cover_image:  blog-cover.jpg
   logo:         logo.png
 
   # Company information
-  company:      Incorporated
+  company:      Kodermine
   url:          http://sendtoinc.com/
   facebook:     sendtoinc
-  twitter:      sendtoinc
+  twitter:      kodermine
   gplus:        '101183822199340201470'
   about_link:   https://sendtoinc.com/about/
 
