@@ -6,8 +6,8 @@
     <atom:link href="http://incorporated.sendtoinc.com/feed.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Mon, 28 Apr 2014 06:23:22 +0000</pubDate>
-    <lastBuildDate>Mon, 28 Apr 2014 06:23:22 +0000</lastBuildDate>
+    <pubDate>Tue, 06 May 2014 04:27:34 +0000</pubDate>
+    <lastBuildDate>Tue, 06 May 2014 04:27:34 +0000</lastBuildDate>
 
     
     
@@ -17,7 +17,312 @@
       <pubDate>Sun, 27 Apr 2014 00:00:00 +0000</pubDate>
       <author></author>
       <guid>http://incorporated.sendtoinc.com/ruby/2014/04/27/ruby_tutorial</guid>
-      <description>&lt;p&gt;HELLO WORLd&lt;/p&gt;</description>
+      <description>&lt;h1 id=&quot;koding_ruby_git_basics&quot;&gt;Koding Ruby Git Basics&lt;/h1&gt;
+
+&lt;p&gt;Hello Everyone, this is the shownotes that comes with the Git Basics hangout that we just did&lt;/p&gt;
+
+&lt;h2 id=&quot;what_we_learned&quot;&gt;What we learned&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Git explained, timelines, commits, staging, timecapsules&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;VCS Concept&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Adding configurations&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Generating SSH keys&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Basic Commands&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git add&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git remote&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git push&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git stash&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git diff&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;HEAD&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git reset&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git checkout&lt;/code&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;code&gt;git branch&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+
+&lt;li&gt;
+&lt;p&gt;Git Tips&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;using wildcards&lt;/li&gt;
+
+&lt;li&gt;Separate commits&lt;/li&gt;
+
+&lt;li&gt;branching&lt;/li&gt;
+
+&lt;li&gt;merge conflicts “OH NO T_T”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;version_control_systems&quot;&gt;Version Control Systems&lt;/h2&gt;
+
+&lt;p&gt;Version control(VCS) is a system that records changes to a file or a set of files in a repository. In the programming world a version control system is very useful. Its very convenient to have a tool that keeps track of the changes we’ve made overtime in the lifecycle of our project, if ever we made a mistake in our code we could easily reset a file back to a version where it was working.&lt;/p&gt;
+
+&lt;p&gt;On top of all that a VCS is not just limited for programmers, writers, artists and basically anyone who uses a computer that makes changes to files can use this.&lt;/p&gt;
+
+&lt;p&gt;Having a version controll is also great for work that requires collaboration since everyone’s changes are tracked and if we are to merge them all together we can do it easily using git.&lt;/p&gt;
+
+&lt;h2 id=&quot;git__a_distributed_version_control_system&quot;&gt;Git - a distributed Version Control System&lt;/h2&gt;
+
+&lt;p&gt;&amp;gt; Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency. &lt;/p&gt;
+
+&lt;p&gt;Git is actually one of many version control systems out there, and what makes git different from other version control systems is that it’s “distributed”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;So what does distributed version control mean?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Version control systems have different types:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Local Version Control System&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Many people’s version-control method of choice is to copy files into another directory (perhaps a time-stamped directory, if they’re clever). This approach is very common because it is so simple, but it is also incredibly error prone. It is easy to forget which directory you’re in and accidentally write to the wrong file or copy over files you don’t mean to.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;To deal with this issue, programmers long ago developed local VCSs that had a simple database that kept all the changes to files under revision control.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;defenition from &lt;a href=&quot;http://git-scm.com/book/en/Getting-Started-About-Version-Control&quot;&gt;git-cm&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://git-scm.com/figures/18333fig0101-tn.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Image from git-scm.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Centralized Version Control System&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;The next major issue that people encounter is that they need to collaborate with developers on other systems. To deal with this problem, Centralized Version Control Systems (CVCSs) were developed. These systems, such as CVS, Subversion, and Perforce, have a single server that contains all the versioned files, and a number of clients that check out files from that central place. For many years, this has been the standard for version control. defenition from &lt;a href=&quot;http://git-scm.com/book/en/Getting-Started-About-Version-Control&quot;&gt;git-cm&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://git-scm.com/figures/18333fig0102-tn.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Image from git-scm.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Distributed Version Control System&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;This is where Distributed Version Control Systems (DVCSs) step in. In a DVCS (such as Git, Mercurial, Bazaar or Darcs), clients don’t just check out the latest snapshot of the files: they fully mirror the repository. Thus if any server dies, and these systems were collaborating via it, any of the client repositories can be copied back up to&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;the server to restore it. Every checkout is really a full backup of all the data.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;defenition from &lt;a href=&quot;http://git-scm.com/book/en/Getting-Started-About-Version-Control&quot;&gt;git-cm&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://git-scm.com/figures/18333fig0103-tn.png&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Image from git-scm.com&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;configuring_our_git&quot;&gt;Configuring our git&lt;/h2&gt;
+
+&lt;p&gt;We want git to recognize who we are, so let’s configure it to do so by running the following commands in our terminal.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+git config --global user.name &amp;quot;Your User Name&amp;quot; # this will set the username
+git config --global user.email your@email.com # this will set your email address
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;git config –global actually just stores these configuration in a separate file in your home directory. You can view it by typing:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+cat ~/.gitconfig
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;We can actually do looots of things with git config, but for now, let’s just use it to add our email and username.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;CONFIG BONUS&lt;/strong&gt; Let’s add pretty colors to our git &amp;lt;3&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+git config --global color.ui true
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This will make our git interface have color syntax (e.g. red for lines removed and green for lines added)&lt;/p&gt;
+
+&lt;h2 id=&quot;setting_up_ssh_keys&quot;&gt;Setting up SSH KEYS&lt;/h2&gt;
+
+&lt;p&gt;In our hangouts I simply demonstrated a tutorial provided by &lt;a href=&quot;https://help.github.com/articles/generating-ssh-keys&quot;&gt;Github&lt;/a&gt;. Please follow that link to learn how to generate SSH keys for your machine and add them to github. Alternatively you can download the client for your machine and this will automatically add ssh keys and add them to github.&lt;/p&gt;
+
+&lt;h2 id=&quot;git_timelines&quot;&gt;Git timelines&lt;/h2&gt;
+
+&lt;p&gt;Git creates a timeline for us that will contain time capsules or snapshots of our folder. The green marks below represent the snapshots. We will discuss what they are below&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.evernote.com/shard/s217/sh/4165756c-a8e9-4f5a-9c03-2496ac5c0828/575891ce6d6a3415406823969b9b21bb/res/c016613c-5a7f-4810-9bcd-d99db9bef8c4/skitch.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;basic_git_commands&quot;&gt;Basic Git Commands&lt;/h2&gt;
+
+&lt;h3 id=&quot;&quot;&gt;&lt;code&gt;git init&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;git init&lt;/code&gt; initializes a git repository in whatever folder we’re located in. It enables the folder we’re in to be version controlled.&lt;/p&gt;
+
+&lt;p&gt;Without initializing git, we cannot run any git commands in our folder. Let’s try it out.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+git status #running git command in a folder is not git enabled
+output: fatal: Not a git repository (or any of the parent directories): .git
+
+git init # to initialize git
+output: Initialized empty Git repository in /Users/shopify/test/.git/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;_2&quot;&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;git status&lt;/code&gt; displays if there’s any differences between the current files we have and the last commit/snapshot that was in our repository. It also displays if there’s anything currently staged in our repository.&lt;/p&gt;
+
+&lt;h3 id=&quot;_3&quot;&gt;&lt;code&gt;git add&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;git add&lt;/code&gt; adds files to our &lt;em&gt;stage&lt;/em&gt;. Git add accepts a filename as an argument, or a wild card. We can do &lt;code&gt;git add .&lt;/code&gt; to add all the files. We can also pass it the name of the extension + a wild card so that it will add all the files with that extension &lt;code&gt;git add ‘*.txt’&lt;/code&gt; will add all the files that have &lt;code&gt;txt&lt;/code&gt; as an extension.&lt;/p&gt;
+
+&lt;h4 id=&quot;what_is_staged&quot;&gt;What is staged?&lt;/h4&gt;
+
+&lt;p&gt;So let’s imagine an actual stage, and snapshots as actual pictures. When we add new files to our stage they are not necessarily in a snapshot yet, just think that they’re getting ready for a photoshoot and they’re posing right now. When we take the picture it’s the actual snapshot and the files that are in the stage are the only ones included in it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://www.evernote.com/shard/s217/sh/a540e82c-f5db-4c0a-a515-00ae8bf11904/9483f62530491fed6fe416757a8039e1/res/10d307fb-7053-42d0-b763-e782bf45eaf0/skitch.jpg&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;_4&quot;&gt;&lt;code&gt;git commit&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;code&gt;git commit&lt;/code&gt; records the changes or takes the “snapshot” of the files on the stage. &lt;code&gt;git commit&lt;/code&gt; accepts the option &lt;code&gt;-m&lt;/code&gt; and a message parameter that will serve as the title of the snapshot.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+git commit -m &amp;quot;fixed the typo &amp;#39;asdf&amp;#39; to &amp;#39;qwerty&amp;#39;&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Tip:&lt;/strong&gt; It’s a good practice to pass short but detailed messages of what we did for the commit.&lt;/p&gt;
+
+&lt;h3 id=&quot;_5&quot;&gt;&lt;code&gt;git remote&lt;/code&gt;&lt;/h3&gt;
+
+&lt;p&gt;We used &lt;code&gt;git remote&lt;/code&gt; to connect with our github repo. Git remote allows us to add a remote repositorie from the cloud that will be connected to our current repository.&lt;/p&gt;
+
+&lt;p&gt;Usually it is best to keep our original repository in the cloud just in case something happens to our devices.&lt;/p&gt;
+
+&lt;p&gt;In the hangout we passed 3 parameters to &lt;code&gt;git remote [action] [name-of-remote-repository] [url-of-the-repository]&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;adding_repositories&quot;&gt;Adding Repositories&lt;/h4&gt;
+
+&lt;p&gt;&lt;code&gt;action&lt;/code&gt; - we can pass either &lt;code&gt;add&lt;/code&gt; or &lt;code&gt;rm&lt;/code&gt; to add or remove our remote repository.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;name-of-repository&lt;/code&gt; - here we will pass the name we would like to assign to our remote repository. It’s common to name our remote cloud repository “origin”.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;url-of-the-repository&lt;/code&gt; - We’ve used github to get the url of our repository.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Steps to get the remote url&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Navigate to http://github.com&lt;/li&gt;
+
+&lt;li&gt;Go to the repository that you want to use, and get the &lt;em&gt;SSH clone url&lt;/em&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img height=&#39;500px&#39; src=&#39;http://i.gyazo.com/cc6b82746633400c20769fb2599074e1.gif&#39; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;This is what our git command looks like&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git remote add origin git@github.com:your-user-name/git-basics.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;removing_repositories&quot;&gt;Removing repositories&lt;/h4&gt;
+
+&lt;p&gt;Removing remote repositories is &lt;em&gt;easy&lt;/em&gt;. All we need to do is this: &lt;code&gt;git remote rm [name-of-repository]&lt;/code&gt;. That’s it.&lt;/p&gt;
+
+&lt;p&gt;So if I want to remove &lt;code&gt;origin&lt;/code&gt; I will do &lt;code&gt;git remote rm origin&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;git_push&quot;&gt;Git push&lt;/h3&gt;
+
+&lt;p&gt;Git push allows us to &lt;code&gt;push&lt;/code&gt; and copies our last changes into the remote repository that we created. The changes that are going to be copied are only the ones that are commited.&lt;/p&gt;
+
+&lt;h3 id=&quot;git_stash&quot;&gt;Git stash.&lt;/h3&gt;
+
+&lt;p&gt;There may be times that we want git to remember the files we’ve added to the stage, but we also want to undo it and maybe try something else.&lt;/p&gt;
+
+&lt;p&gt;Git let’s us &lt;code&gt;stash&lt;/code&gt; the files on our stage and keeps it, until we are ready to &lt;code&gt;apply&lt;/code&gt; it again.&lt;/p&gt;
+
+&lt;p&gt;Let’s try it out.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;First let’s create 2 sample files&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code&gt;$ touch sample1.txt sample2.txt&lt;/code&gt; 2. Then let’s add them to our stage.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ git add sample1.txt sample2.txt&lt;/code&gt; 3. Let’s check our status. We can see that we’ve added the files and that it’s ready to be commited.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+  $ git status
+  &amp;gt; # Changes to be committed:
+  &amp;gt;#   (use &amp;quot;git reset HEAD &amp;lt;file&amp;gt;...&amp;quot; to unstage)
+  &amp;gt;#
+  &amp;gt;#  new file:   sample1.txt
+  &amp;gt;#  new file:   sample2.txt
+  &amp;gt;#
+ &lt;/code&gt; 4. Now let’s do a &lt;code&gt;git stash&lt;/code&gt; and check the &lt;code&gt;status&lt;/code&gt;. We can see that the files we created are gone.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;
+  $ git stash
+  &amp;gt; Saved working directory and index state WIP on gh-pages: 8741e43 fix date
+  &amp;gt; HEAD is now at 111111 fixing things
+  $ git status
+  &amp;gt; # On branch origin
+  &amp;gt; nothing to commit, working directory clean
+ &lt;/code&gt; 6. In this step you guys free to add/change/modify any files.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Now let’s do a &lt;code&gt;git stash apply&lt;/code&gt;. Now we can see that the files have been added&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;code&gt;
+  $ git stash apply
+  &amp;gt;# On branch gh-pages
+  &amp;gt;# Changes to be committed:
+  &amp;gt;#   (use &amp;quot;git reset HEAD &amp;lt;file&amp;gt;...&amp;quot; to unstage)
+  &amp;gt;#
+  &amp;gt;#  new file:   sample1.txt
+  &amp;gt;#  new file:   sample2.txt
+  &amp;gt;#
+ &lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;https://help.github.com/articles/generating-ssh-keys&lt;/p&gt;
+
+&lt;p&gt;http://git-scm.com/ http://git-scm.com/book/en/Getting-Started-About-Version-Control&lt;/p&gt;
+
+&lt;p&gt;http://en.wikipedia.org/wiki/Revision_control&lt;/p&gt;</description>
     </item>
     
     
