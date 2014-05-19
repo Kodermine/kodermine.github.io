@@ -1,0 +1,48 @@
+/* CONFIGURATION */
+
+/* Bodytext font */
+$font: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* Font for headings */
+$fontheadings: "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+/* Text colors */
+$text: #21272d;
+$textmuted: #848484;
+$accent: #2077b2;
+
+
+/* IMPORT CSS FILES */
+@import "bootstrap";
+@import "base";
+@import "nav";
+@import "article";
+@import "syntax";
+@import "responsive";
+
+/* font awesome*/
+@import "variables";
+@import "mixins";
+@import "path";
+@import "core";
+@import "larger";
+@import "fixed-width";
+@import "list";
+@import "bordered-pulled";
+@import "spinning";
+@import "rotated-flipped";
+@import "stacked";
+@import "icons";
+
+
+
+.tutorial-video {
+  max-height: 1000px !important;
+  @media screen and (min-width: 1000px) {
+    margin: 0 100px;
+  }
+
+  @media screen and (max-width: 999px) {
+    margin: 0px;
+  }
+}

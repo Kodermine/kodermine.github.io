@@ -1,75 +1,61 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>KoderMine</title>
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/styles/default/easybox.min.css" type="text/css" media="screen" />
-    <meta name="robots" content="index, follow"/>
-    <meta name="description" content="Kodermine is an online community that provides resources, help, and guides for people who are interested in Programming and Web Development.">
-    <meta name="keywords" content="programmers, coders, tutorials, online community, community, programming help, programming tutorials, coding sessions, kodermine, koder, mine, kodermine group, kodermine community, ruby tutorials, git tutorials, php tutorials, programming languages, web development, web programming, web, ">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@kodermine">
-    <meta name="twitter:title" content="Kodermine: Videos, Live Hangouts, Code Sessions">
-    <meta name="twitter:description" content="We’re a community that provides help and guidance to people that are interested in learning more about Programming and Web Development.">
-    <meta name="twitter:creator" content="@kodermine">
-    <meta name="twitter:image:src" content="http://s3.amazonaws.com/landmhel/uploads/kodermine_twitter_card.png">
-    <meta name="twitter:domain" content="kodermine.com">
+---
+layout: base
+---
+<div class="blog-cover" style="background-image:url(/images/{{ site.inc.cover_image }});">
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/main.css">
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <section>
+        <div class="container">
+            <h1>{{ site.inc.title }}</h1>
+            {% if site.inc.subtitle %}<h3>{{ site.inc.subtitle }}</h3>{% endif %}
 
-      ga('create', 'UA-48751629-1', 'kodermine.com');
-      ga('send', 'pageview');
+            {% if site.inc.twitter %}
+            <a href="https://twitter.com/{{ site.inc.twitter }}" title="Follow on Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+            {% endif %}
+            {% if site.inc.facebook %}
+            <a href="http://facebook.com/{{ site.inc.facebook }}" title="Like on Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+            {% endif %}
+            {% if site.inc.github %}
+            <a href="http://github.com/{{ site.inc.github }}" title="Follow on Github" target="_blank"><i class="fa fa-github"></i></a>
+            {% endif %}
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="fa fa-rss"></i>
+            </a>
+        </div>
+    </section>
+</div>
 
-    </script>
 
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <!-- concatenated -->
-    <script type="text/javascript" src="js/easybox/distrib.min.js"></script>
-
-    <!-- seperate files -->
-    <script type="text/javascript" src="js/easybox/easybox.min.js"></script>
-    <script type="text/javascript" src="js/easybox/handlers.min.js"></script>
-    <script type="text/javascript" src="js/easybox/extras/autoload.min.js"></script>
-  </head>
-  <body>
-
-    <div class="container">
-      <div class="main section">
-        <img src="images/logo.png" />
-        <h1>KODERMINE</h1>
-        <p>VIDEOS | LIVE HANGOUTS | CODE SESSIONS</p>
-      </div>
-
-      <div class="about section">
-        <h1>KODERMINE</h1>
-        <p>We’re a community that provides help and guidance to people that are interested in learning more about Programming and Web Development.</p>
-      </div>
-
-      <div class="videos section">
-        <h1>VIDEOS</h1>
-        <a href="https://www.youtube.com/embed/tBm1b4nQWXk" title="Kodermine Teaches Fun Stuff with Git" class="lightbox" data-width="832" data-height="624"><img src="/images/youtube_previews/kodermineteachesfunstuffwithgit.png"/></a>
-
-        <a href="https://www.youtube.com/embed/ZTFaM2ITpjE" title="Kodermine Teaches Git Basics" class="lightbox" data-width="832" data-height="624"><img src="/images/youtube_previews/kodermineteachesgit.png"/></a>
-
-        <a href="https://www.youtube.com/embed/yDTV_bfl9oM" title="Kodermine Teaches Ruby" class="lightbox" data-width="832" data-height="624"><img src="/images/youtube_previews/kodermineteachesruby.png"/></a>
-      </div>
-
-      <div class="social_media section">
-        <h1>SOCIAL MEDIA</h1>
-        <a href="http://twitter.com/kodermine" onclick="ga('send', 'event', 'social_media', 'click', 'twitter');"><img class="social_media_icon" src="images/social_media/twitter.png" /></a>
-
-        <a href="http://www.facebook.com/koderminee" onclick="ga('send', 'event', 'social_media', 'click', 'facebook');"><img class="social_media_icon" src="images/social_media/facebook.png" /></a>
-        <a href="http://www.youtube.com/user/kodermine" onclick="ga('send', 'event', 'social_media', 'click', 'youtube');"><img class="social_media_icon" src="images/social_media/youtube.png" /></a>
-        <a href="http://www.github.com/kodermine" onclick="ga('send', 'event', 'social_media', 'click', 'github');"><img class="social_media_icon" src="images/social_media/github.png" /></a>
-      </div>
-    </div>
-
-  </body>
-</html>
+<article class="container">
+{% for post in paginator.posts %}
+  {% unless post.draft %}
+    <section class="index">
+        <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
+        <div>
+            <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
+            {% if post.youtube%}
+            <div class="video-container video-preview">
+                <iframe width="560" height="315" src="//{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>
+            </div>
+            {% endif %}
+            <p>{{ post.excerpt }}</p>
+            <div class="meta">
+                Written By <address>{{ post.author.name }}</address> &mdash;
+                <time pubdate datetime="{{ post.date | date: "%Y-%d-%B" }}" title="{{ post.date | date: "%B %d, %Y" }}">{{ post.date | date: "%B %d, %Y" }}</time>
+            </div>
+        </div>
+    </section>
+    {% endunless %}
+    {% endfor %}
+    <section class="pagination" style="text-align:center">
+      {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <a href="/" class="btn btn-outline">‹ Newer</a>
+        {% else %}
+        <a href="/page{{ paginator.previous_page }}" class="btn btn-outline">‹ Newer</a>
+        {% endif %}
+      {% endif %}
+      {% if paginator.next_page %}
+        <a href="/page{{ paginator.next_page }}" class="btn btn-outline">Older ›</a>
+      {% endif %}
+    </section>
+</article>

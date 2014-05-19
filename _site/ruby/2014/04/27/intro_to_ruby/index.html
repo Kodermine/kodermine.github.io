@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruby Basics &mdash; KODERMINE</title>
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/logo.png"/>
+    <link href="/feed.xml" rel="alternate" type="application/rss+xml" title="KODERMINE" />
+    <meta name="title" content="Ruby Basics ">
+    <link rel="canonical" href="http://kodermine.com/ruby/2014/04/27/intro_to_ruby/">
+    
+    <link rel="author" href="https://plus.google.com/+FloridaElago">
+    <meta property="og:title" content="Ruby Basics "/>
+    <meta property="og:url" content="http://kodermine.com/ruby/2014/04/27/intro_to_ruby/"/>
+    
+    <meta property="og:image" content="http://kodermine.com/images/blog-cover.jpg"/>
+    
+    <meta property="og:image" content="http://kodermine.com/images/logo.png"/>
+    
+    
+    <meta property="og:description" content="Ruby is a programming language created by an <i>awesome</i> Programmer from Japan named <a href='http://en.wikipedia.org/wiki/Yukihiro_Matsumoto'>Yukihiro Matusumoto (or Matz)</a>. He had a vision of creating a scripting language that was more powerful than pearl and more object oriented than python. He wanted to make the language human readable and often said 'natural, not simple' in a way that it mirrors life."/>
+    <meta name="description" content="Ruby is a programming language created by an <i>awesome</i> Programmer from Japan named <a href='http://en.wikipedia.org/wiki/Yukihiro_Matsumoto'>Yukihiro Matusumoto (or Matz)</a>. He had a vision of creating a scripting language that was more powerful than pearl and more object oriented than python. He wanted to make the language human readable and often said 'natural, not simple' in a way that it mirrors life."/>
+    
+    <meta property="og:site_name" content="KODERMINE">
+</head>
+<body>
+
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/logo.png" alt="Inc">
+            </a>
+            <a href="/" class="home">Home</a>
+            
+                <a href="/categories/ruby" >Ruby</a>
+            
+                <a href="/categories/git" >Git</a>
+            
+            
+        </nav>
+    </header>
+</section>
+
+
+<article>
+  <div class="container">
+    <header>
+      <div class="meta">
+          By <address><a rel="author" href="" title="Florida Elago" target="_blank">Florida Elago</a></address> &mdash;
+          <time pubdate datetime="2014-27-April" title="April 27, 2014">April 27, 2014</time>
+      </div>
+      <h1 class="title">Ruby Basics</h1>
+      <h2 class="subtitle">Introduction to Ruby</h2>
+    </header>
+
+    <section>
+      <p>Hello Ruby Koders,</p>
+
+<p>These are our first shownotes from our Google Hangout session that we had on March 1, 2014.
+This also doesn&#39;t include the quiz stuff that we worked on, I&#39;m gonna write a seperate article for that</p>
+
+<p>In our session we discussed the following topics:</p>
+
+<p><strong>Brief Introduction</strong></p>
+
+<ul>
+<li><a href="#what-is-ruby">What is Ruby</a>
+
+<ul>
+<li><a href="#everything-is-an-object-in-ruby">OMG! Everything in Ruby is an object!</a></li>
+</ul></li>
+<li><a href="#ruby-version-managers">Ruby Version Managers</a></li>
+<li><a href="#gems">Gems</a></li>
+</ul>
+
+<p><strong><a href="#code-begins-here">Coding Time</a></strong></p>
+
+<ul>
+<li><a href="#simple-iterations-with-ruby">How to do simple iterations</a></li>
+<li><a href="#comments">Comments</a></li>
+<li><a href="#variables">Variables</a>
+
+<ul>
+<li><a href="#constants">Constants</a></li>
+</ul></li>
+<li><a href="#conditionals">Conditionals</a>
+
+<ul>
+<li><a href="#if-statement">If statement</a></li>
+<li><a href="#unless-statement">Unless statement</a></li>
+</ul></li>
+<li><a href="#nil-nils">nil == nada</a></li>
+<li><a href="#range">Range</a>
+
+<ul>
+<li><a href="#simple-shorthand-trick">Converting a range to an array</a></li>
+</ul></li>
+<li><a href="#arrays">Arrays</a>
+
+<ul>
+<li><a href="#shorthand-bonus"><code>&quot;&lt;&lt;&quot;</code> <code>Array#push</code> short hand</a></li>
+<li><a href="#arraypush"><code>Array#push</code></a></li>
+<li><a href="#arraypop"><code>Array#pop</code></a></li>
+<li><a href="#arraydelete"><code>Array#delete</code></a></li>
+<li><a href="#arraydelete_at"><code>Array#delete_at</code></a></li>
+</ul></li>
+</ul>
+
+<h2>What is Ruby</h2>
+
+<p>Ruby is a programming language created by an <em>awesome</em> Programmer from Japan named <a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">Yukihiro Matusumoto</a>(or Matz). He had a vision of creating a scripting language that was more powerful than pearl and more object oriented than python. He wanted to make the language human readable and often said &quot;natural, not simple&quot; in a way that it mirrors life.</p>
+
+<h3>Everything is an object in Ruby</h3>
+
+<blockquote>
+<p>In Ruby, just like in real life, our world is filled with objects. Everything is an object - integers, characters, text, arrays - everything. - <a href="https://rubymonk.com/learning/books/1-ruby-primer/chapters/6-objects/lessons/35-introduction-to-objects">Ruby Monk</a></p>
+</blockquote>
+
+<p><em>This will be discussed later on when we tackle OOP more in the future</em></p>
+
+<h2>Ruby Version Managers</h2>
+
+<p>We need version managers because a Ruby version might have a specific syntax that has been deprecated in another and using another version of Ruby to run an application or script that requires a specific version of Ruby could result to multiple syntax errors.</p>
+
+<p>To solve this we use a tool called version manager, version managers allows us to install and work with different Ruby environment, interpreters and gems.</p>
+
+<p>The following are the most notable ruby version managers out there</p>
+
+<ul>
+<li><a href="http://rbenv.org">rbenv</a></li>
+<li><a href="https://rvm.io/">RVM</a></li>
+</ul>
+
+<h1>Gems</h1>
+
+<p>A gem is a module or a library that you can install in your ruby projects so that you are able to use these inside your projects. Gems provide extensions and additional features that extends the capabilities or the Ruby language.</p>
+
+<p>Throughout our hangouts we will be making use of different gems.</p>
+
+<h2>Code begins here.</h2>
+
+<hr>
+
+<h2>Simple iterations with Ruby</h2>
+
+<p>If you were to write a loop in Java it would probably look like this:</p>
+<div class="highlight"><pre><code class="java language-java" data-lang="java"><span class="kd">class</span> <span class="nc">HelloWorld</span> <span class="o">{</span>
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">3</span><span class="o">;</span><span class="n">i</span><span class="o">++)</span>
+       <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">&quot;Hello World!&quot;</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>This will return:</p>
+
+<p>Hello World!
+Hello World!
+Hello World!</p>
+
+<p>in Ruby we can do the same thing, with a simple and readable(for beginners) line of code.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">3</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span> <span class="nb">puts</span> <span class="s2">&quot;Hello World!&quot;</span> <span class="p">}</span>
+</code></pre></div>
+<p>Short and sweet, and it returns the same as above. This is what makes Ruby such a likeable language for most people.</p>
+
+<h2>Comments</h2>
+
+<p>Comments are just words or phrases that you want to put into your code but you don&#39;t really want them to be executed as Ruby code. These could be either used in debugging by commenting out lines that are having problems or documenting. To write a variable in Ruby just add the pound key <code>#</code> before the text</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># This line doesn&#39;t work I wonder why</span>
+<span class="c1"># int i = 0</span>
+<span class="c1">#</span>
+<span class="c1"># Maybe I&#39;ll have a sandwich today.</span>
+<span class="c1"># Nope.. coffee will do just fine.</span>
+<span class="c1"># This will print out hello world</span>
+<span class="nb">puts</span> <span class="s2">&quot;Hello world&quot;</span>
+<span class="nb">puts</span> <span class="s2">&quot;I like sushi&quot;</span>
+<span class="c1"># Hi ruby</span>
+</code></pre></div>
+<p>you can also write comments with multiple lines using this syntax</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="cm">=begin</span>
+<span class="cm">I&#39;m just commenting.. right here.</span>
+<span class="cm">None of this will be executed.</span>
+<span class="cm">Don&#39;t believe me?</span>
+<span class="cm">puts &quot;Believe me!&quot;</span>
+<span class="cm">=end</span>
+</code></pre></div>
+<h2>Variables</h2>
+
+<p>Since Ruby is a dynamic programming language we don&#39;t have to declare variable types anymore! Goodbye <code>int i = 0</code> and hello</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># we can assign an integer to a variable</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="c1"># replace it with a string</span>
+<span class="n">i</span> <span class="o">=</span> <span class="s2">&quot;a string! wow!&quot;</span>
+<span class="c1"># replace it with a boolean</span>
+<span class="n">i</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="c1"># replace it with a string again.... with a heart shape because everyone likes hearts</span>
+<span class="n">i</span> <span class="o">=</span> <span class="s2">&quot;dynamic &lt;3&quot;</span>
+</code></pre></div>
+<p>Ruby programmers like to use the &quot;Ruby Convention&quot; or the &quot;Ruby Way&quot; . We like using <strong>underscores, NOT ~~camel case~~</strong> (sorry programmers from other languages TT_TT we don&#39;t hate you I promise &lt;3)</p>
+
+<p>So instead of writing something like: <code>myFirstVariableInRuby</code> we want to see something like <code>my_first_variable_in_ruby</code></p>
+
+<p>I would advise you all to follow this convention, it&#39;s still acceptable if you use camel case but that&#39;s just not the &quot;Ruby Way&quot;</p>
+
+<h3>Constants</h3>
+
+<p>Constants are variables that contain values that you do not expect to change. Consonants must start with a capital letter, and just like the &quot;Ruby Way&quot; we do it with underscores</p>
+
+<p><em>Unlike some languages, Ruby will let you change the values in constants by assigning a new value to them</em></p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="no">MINIMUM_CUPS_OF_COFFEE_EVERYDAY</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="no">NUMBER_OF_FINGERS_IN_ONE_HAND</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="c1"># I&#39;m changing it, haha!</span>
+<span class="no">MINIMUM_CUPS_OF_COFFEE_EVERYDAY</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># YESSSS!!!!!!</span>
+<span class="no">NUMBER_OF_FINGERS_IN_ONE_HAND</span> <span class="o">=</span> <span class="mi">6</span> <span class="c1"># WHAAAATTTTTT?????!!!!</span>
+</code></pre></div>
+<h2>Conditionals</h2>
+
+<h3>If statement</h3>
+
+<p>Our first conditional! yay!</p>
+
+<p>if-statement is a condtional statement that will execute if the condition is true and it also has an option to execute another code if it returns false. The condition is passed as an argument to the if statement.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># here we have a variable set to true</span>
+<span class="n">you_like_ruby</span> <span class="o">=</span> <span class="kp">true</span>
+
+<span class="c1"># we pass the variable to the if statement</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">you_like_ruby</span><span class="p">)</span>
+  <span class="c1"># when the value is true this will be executed</span>
+  <span class="nb">puts</span> <span class="s2">&quot;We can be friends&quot;</span>
+<span class="k">else</span>
+  <span class="c1"># when the value is false this will be executed</span>
+  <span class="nb">puts</span> <span class="s2">&quot;We can still be friends&quot;</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>and we can see how natural it feels to read the code.</p>
+
+<blockquote>
+<p>If you like Ruby we can be friends, if not, we can still be friends</p>
+</blockquote>
+
+<h3>Unless statement</h3>
+
+<p>This statement is pretty unique to Ruby, the sytax is similar to the <code>if</code> statement but it works the opposite(because unless is the opposite of if). If the passed value returns <code>false</code> the first statement will run, <code>unless</code> also supports <code>else</code> so if it returns true it will run the code inside the <code>else</code></p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">time_to_drink_coffee</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="k">unless</span> <span class="n">time_to_drink_coffee</span>
+  <span class="c1"># keep programing with ruby</span>
+<span class="k">else</span>
+  <span class="c1"># go get coffee</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>Did you notice that i didn&#39;t put <code>()</code> for passing arguments? Ruby allows us to leave out the parenthesis! :) Isn&#39;t it cool?</p>
+
+<p>Let&#39;s read this like the if statement</p>
+
+<blockquote>
+<p>Unless it&#39;s time to drink coffee then keep programming with Ruby, if yes(time to drink coffee) then go get coffee</p>
+</blockquote>
+
+<p>I admin sometimes unless statements gets pretty confusing sometimes. This is how I would use <code>if</code> and <code>unless</code></p>
+
+<p>Instead of doing</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">time_to_go_out</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="k">if</span> <span class="o">!</span><span class="n">time_to_go_out</span>
+  <span class="c1"># stay in</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>I would prefer to use <code>unless</code></p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">time_to_go_out</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="k">unless</span> <span class="n">time_to_go_out</span>
+  <span class="c1"># just stay inside</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>BUT</p>
+
+<p>I wouldn&#39;t use an <code>unless</code> <code>else</code> because it could be confusing @_@. I would just use an if statement</p>
+
+<p>Not this</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">time_to_go_out</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="k">unless</span> <span class="n">time_to_go_out</span>
+  <span class="c1"># stay inside</span>
+<span class="k">else</span>
+  <span class="c1"># go run</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>But this</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">time_to_go_out</span> <span class="o">=</span> <span class="kp">true</span>
+<span class="k">if</span> <span class="n">time_to_go_out</span>
+  <span class="c1"># go run</span>
+<span class="k">else</span>
+  <span class="c1"># stay inside</span>
+<span class="k">end</span>
+</code></pre></div>
+<p><em>I won&#39;t put case statements here, lets do that next time alrighty</em></p>
+
+<h2>Nil nils.</h2>
+
+<p>What is nil? You might be familiar with NULL or nothing/nada. Let&#39;s say we want to perform an operation in an object, but we don&#39;t know if it exists.</p>
+
+<p>We can simply do</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># .nil is a method that you can call any object to check if they have no value or if they have a value.</span>
+<span class="c1"># it can get oretty tricky because it doesn&#39;t necessarily mean empty.</span>
+<span class="c1"># &quot;&quot; this is an empty string, it&#39;s not nil, but it&#39;s empty</span>
+
+
+<span class="k">if</span> <span class="n">cool_object</span><span class="o">.</span><span class="n">nil?</span>
+  <span class="nb">puts</span> <span class="s2">&quot;cool object doesn&#39;t exist&quot;</span>
+<span class="k">else</span>
+  <span class="nb">puts</span> <span class="n">cool_object</span><span class="o">.</span><span class="n">inspect</span>
+<span class="k">end</span>
+</code></pre></div>
+<h2>Range</h2>
+
+<p>A range represents an interval or a set of values with a beginning and an end.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># let&#39;s create a range from 1-20</span>
+<span class="c1">#to do that we can simply do</span>
+<span class="n">my_first_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">20</span><span class="p">)</span>
+</code></pre></div>
+<p>Yay! we created a range, but hmm, what can we do with it? ...
+Well let&#39;s try going through <code>each</code> of them and print out their values!</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">my_first_range</span><span class="o">.</span><span class="n">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">puts</span> <span class="n">x</span> <span class="p">}</span>
+<span class="c1">## or optionally</span>
+<span class="n">my_first_range</span><span class="o">.</span><span class="n">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">x</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>awesome! that will return</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="mi">1</span>
+<span class="mi">2</span>
+<span class="mi">3</span>
+<span class="mi">4</span>
+<span class="mi">5</span>
+<span class="mi">6</span>
+<span class="mi">7</span>
+<span class="mi">8</span>
+<span class="mi">9</span>
+<span class="mi">10</span>
+<span class="mi">11</span>
+<span class="mi">12</span>
+<span class="mi">13</span>
+<span class="mi">14</span>
+<span class="mi">15</span>
+<span class="mi">16</span>
+<span class="mi">17</span>
+<span class="mi">18</span>
+<span class="mi">19</span>
+<span class="mi">20</span>
+</code></pre></div>
+<h3>Simple shorthand trick</h3>
+
+<p>If you&#39;re familiar with arrays, this is a trick that I showed to turn a range into an array</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">range_array</span> <span class="o">=</span> <span class="o">*</span><span class="mi">1</span><span class="o">.</span><span class="n">.</span><span class="mi">5</span>
+<span class="c1"># yup that&#39;s pretty much it.</span>
+<span class="c1"># that will return [1,2,3,4,5] (which is an array)</span>
+</code></pre></div>
+<h2>Arrays</h2>
+
+<p><em>Yay our first collection</em></p>
+
+<p>Arrays are a collection of objects that are in order with index values that start with zero.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># I mentioned that arrays have positions that start with zero.</span>
+<span class="c1"># here are positions|0|1|2|3|4|</span>
+<span class="n">one_to_five_array</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="o">]</span>
+</code></pre></div>
+<p><strong>Methods we used in the hangout</strong></p>
+
+<h3>Array#push</h3>
+
+<p>the <code>push</code> method takes in an argument and this will be added to the array.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">x</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">]</span>
+<span class="c1"># push for to the array</span>
+<span class="n">x</span><span class="o">.</span><span class="n">push</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="c1"># now the x array now has [1,2,3,4]</span>
+</code></pre></div>
+<h4>shorthand bonus</h4>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="c1"># the code does the same thing as the code above! :)</span>
+<span class="n">x</span> <span class="o">&lt;&lt;</span> <span class="mi">4</span>
+</code></pre></div>
+<h3>Array#pop</h3>
+
+<p>The <code>pop</code> method deletes the last object in the array. So the object goes.. POP! ... get it? no..? Ok..</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">x</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="o">]</span>
+<span class="n">x</span><span class="o">.</span><span class="n">pop</span>
+<span class="c1"># 3 has been &#39;popped&#39; so the x array now contains [1,2]</span>
+</code></pre></div>
+<h3>Array#delete</h3>
+
+<p>The <code>delete</code> method accepts an argument and it finds it in the array and deletes it.</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">x</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="o">]</span>
+<span class="c1"># hmmm. too much 1s.. let&#39;s delete them ALL!!!</span>
+
+<span class="n">x</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="c1"># now all the 1s are gone [2,3,4,5,6]</span>
+</code></pre></div>
+<h3>Array#delete_at</h3>
+
+<p>Last command we used was <code>delete_at</code>, <code>delete_at</code> takes in an argument, the argument that we will pass must be the index/position of the object we want to delete in the array</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">x</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="o">]</span>
+</code></pre></div>
+<p>also I noticed i just kept on using numbers but an array can hold anything. Watch!</p>
+<div class="highlight"><pre><code class="ruby language-ruby" data-lang="ruby"><span class="n">so_many_types</span> <span class="o">=</span> <span class="o">[</span> <span class="mi">0</span><span class="o">.</span><span class="mo">0123</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Hello Ruby Koding!&quot;</span><span class="p">,</span> <span class="kp">true</span><span class="p">,</span> <span class="kp">false</span><span class="p">,</span> <span class="p">{</span> <span class="ss">message</span><span class="p">:</span> <span class="s2">&quot;hello I&#39;m a hash, i will be introduced later&quot;</span> <span class="p">}</span><span class="o">]</span>
+</code></pre></div>
+<h2>Sources &amp; Resources:</h2>
+
+<ul>
+<li><a href="https://www.ruby-lang.org/en/about/">About Ruby</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Yukihiro_Matsumoto">Yukihiro Matsumoto Wiki</a></li>
+<li><a href="http://rbenv.org">rbenv</a></li>
+<li><a href="http://rvm.io">RVM</a></li>
+<li><a href="http://rubymonk.com">Ruby Monk</a></li>
+<li><a href="http://guides.rubygems.org/what-is-a-gem/">What is a ruby gem</a></li>
+<li><a href="http://www.ruby-doc.org/">Ruby Docs</a></li>
+<li><a href="http://www.ruby-doc.org/core-1.9.3/Array.html">Arrays</a></li>
+<li><a href="http://www.ruby-doc.org/core-1.9.3/Range.html">Ranges</a></li>
+</ul>
+
+      
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button"  data-text="Ruby Basics" data-related="kodermine">Tweet</a>
+    </div>
+    
+    
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+    
+    
+    <div>
+        <div class="g-plusone" data-size="medium"></div>
+    </div>
+    
+    
+    
+    <div>
+        <a href="http://news.ycombinator.com/submit" class="hn-share-button">Vote on HN</a>
+    </div>
+    
+</div>
+
+    </section>
+
+    <footer>
+      <address>
+         <img src="https://lh6.googleusercontent.com/-z__0yucwG38/AAAAAAAAAAI/AAAAAAAAJ_A/qDY5dtCZ4zo/s120-c/photo.jpg">
+          <p>Written by <strong><a rel="author" href="https://twitter.com/floriidaaa" title="" target="_blank">Florida Elago</a></strong><br>
+          <span class="muted">Co-founder</span>
+          </p>
+      </address>
+
+    </footer>
+
+    
+    <section>
+      <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'kodermine'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+    </section>
+    
+  </div>
+</article>
+
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; 2014
+
+        <nav>
+            <a href="http://kodermine.com/">Kodermine</a> &middot;
+            <a href="/">Blog</a> &middot;
+            <a href="http://kodermine.com/">Product</a> &middot; 
+            
+        </nav>
+
+        <nav class="social">
+            
+            <a href="https://twitter.com/kodermine" title="Follow on Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+            
+            
+            <a href="http://facebook.com/koderminee" title="Like on Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+            
+            
+            <a href="http://github.com/kodermine" title="Follow on Github" target="_blank"><i class="fa fa-github"></i></a>
+            
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="fa fa-rss"></i>
+            </a>
+        </nav>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/assets/main.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253595308025739";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
+<script>
+    (function(d, t) {
+        var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+        g.src = '//hnbutton.appspot.com/static/hn.min.js';
+        s.parentNode.insertBefore(g, s);
+    }(document, 'script'));
+</script>
+
+  <!--google analytics tracking code here-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48751629-1', 'kodermine.com');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+</body>
+</html>
