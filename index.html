@@ -9,13 +9,16 @@ layout: base
             {% if site.inc.subtitle %}<h3>{{ site.inc.subtitle }}</h3>{% endif %}
 
             {% if site.inc.twitter %}
-            <a href="https://twitter.com/{{ site.inc.twitter }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter"></i></a>
+            <a href="https://twitter.com/{{ site.inc.twitter }}" title="Follow on Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
             {% endif %}
             {% if site.inc.facebook %}
-            <a href="http://facebook.com/{{ site.inc.facebook }}" title="Like on Facebook" target="_blank"><i class="icon icon-facebook"></i></a>
+            <a href="http://facebook.com/{{ site.inc.facebook }}" title="Like on Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+            {% endif %}
+            {% if site.inc.github %}
+            <a href="http://github.com/{{ site.inc.github }}" title="Follow on Github" target="_blank"><i class="fa fa-github"></i></a>
             {% endif %}
             <a href="/feed.xml" title="RSS Feed">
-                <i class="icon icon-rss"></i>
+                <i class="fa fa-rss"></i>
             </a>
         </div>
     </section>
@@ -29,9 +32,11 @@ layout: base
         <!-- {% if post.author.image %}<img src="/images/{{ post.author.image }}" class="avatar">{% endif %}-->
         <div>
             <h2 class="title"><a href="{{ post.url }}" rel="prefetch">{{ post.title }}</a></h2>
-            <div class="video-container">
+            {% if post.youtube%}
+            <div class="video-container video-preview">
                 <iframe width="560" height="315" src="//{{ post.youtube }}" frameborder="0" allowfullscreen></iframe>
             </div>
+            {% endif %}
             <p>{{ post.excerpt }}</p>
             <div class="meta">
                 Written By <address>{{ post.author.name }}</address> &mdash;
