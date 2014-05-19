@@ -21,19 +21,19 @@ inc:
   # Comments
   disqus:
     # Eg. "exampleblog" Set to false to disable comments
-    shortname:  false
+    shortname:  kodermine
 
   # Sharing settings
   sharing:
-    twitter:    false
-    facebook:   false
-    gplus:      false
-    hn:         false
+    twitter:    true
+    facebook:   true
+    gplus:      true
+    hn:         true
 
 
  # Analytics
   analytics:
-    google: false # Add tracking code in _includes/_google-analytics.html
+    google: true # Add tracking code in _includes/_google-analytics.html
 
 
   # Google Fonts
