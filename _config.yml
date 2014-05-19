@@ -7,15 +7,16 @@ inc:
 
   # Company information
   company:      Kodermine
-  url:          http://sendtoinc.com/
-  facebook:     sendtoinc
+  url:          http://kodermine.com/
+  facebook:     koderminee
   twitter:      kodermine
-  gplus:        '101183822199340201470'
-  about_link:   https://sendtoinc.com/about/
+  github:       kodermine
+  gplus:        '116588140750722021201'
+
 
   # Product Information
-  product_link: http://incorporated.sendtoinc.com/
-  tagline:      "Get a modern blog for your company"
+  product_link: http://kodermine.com/
+  tagline:      "Kodermine"
 
   # Comments
   disqus:
@@ -41,7 +42,7 @@ inc:
 
   # Setup your fonts, colors etc at _assets/stylesheets/main.scss
 
-url:         http://incorporated.sendtoinc.com
+url:         http://kodermine.com
 source:      .
 destination: ./_site
 plugins:     ./_plugins
@@ -62,7 +63,7 @@ permalink:     pretty
 paginate_path: 'page:num'
 paginate: 10
 
-markdown:      maruku
+markdown:      redcarpet
 markdown_ext:  markdown,mkd,mkdn,md
 textile_ext:   textile
 
@@ -85,7 +86,7 @@ rdiscount:
   extensions: []
 
 redcarpet:
-  extensions: []
+  extensions: [fenced_code_blocks]
 
 kramdown:
   auto_ids: true
