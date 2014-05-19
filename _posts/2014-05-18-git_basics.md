@@ -1,19 +1,18 @@
 ---
 layout: post
 
-title: Jekyll Incorporated Features
-subtitle: "What's in the box"
-cover_image: blog-cover.jpg
-youtube: "www.youtube.com/embed/yDTV_bfl9oM"
-excerpt: "Incorporated provides a great typography, responsive design, author details, semantic markup and more."
-category: "ruby"
+title: Git Basics
+subtitle: "Introduction to Version Control using Git."
+youtube: www.youtube.com/embed/ZTFaM2ITpjE
+excerpt: "Version control(VCS) is a system that records changes to a file or a set of files in a repository. In the programming world a version control system is very useful. Its very convenient to have a tool that keeps track of the changes we've made overtime in the lifecycle of our project, if ever we made a mistake in our code we could easily reset a file back to a version where it was working."
+category: "git"
 
 author:
-  name: Karri Saarinen
-  twitter: karrisaarinen
-  gplus: 100687498195339762535
-  bio: Co-founder, Design
-  image: ks.png
+  name: Florida Elago
+  twitter: floriidaaa
+  gplus: +FloridaElago
+  bio: Co-founder
+  image: https://lh6.googleusercontent.com/-z__0yucwG38/AAAAAAAAAAI/AAAAAAAAJ_A/qDY5dtCZ4zo/s120-c/photo.jpg
 ---
 
 # Koding Ruby Git Basics
@@ -116,7 +115,7 @@ cat ~/.gitconfig
 We can actually do looots of things with git config, but for now, let's just use it to add our email and username.
 
 **CONFIG BONUS**
-Let's add pretty colors to our git &lt;3
+Let's add pretty colors to our git <3
 
 ```
 git config --global color.ui true
@@ -231,52 +230,50 @@ Let's try it out.
 1. First let's create 2 sample files
 
   `$ touch sample1.txt sample2.txt`
+
 2. Then let's add them to our stage.
 
   `$ git add sample1.txt sample2.txt`
+
 3. Let's check our status. We can see that we've added the files and that it's ready to be commited.
 
-  ```
-  $ git status
-  > # Changes to be committed:
-  >#   (use "git reset HEAD <file>..." to unstage)
-  >#
-  >#  new file:   sample1.txt
-  >#  new file:   sample2.txt
-  >#
-  ```
+```bash
+$ git status
+> # Changes to be committed:
+>#   (use "git reset HEAD <file>..." to unstage)
+>#
+>#  new file:   sample1.txt
+>#  new file:   sample2.txt
+>#
+```
 4. Now let's do a `git stash` and check the `status`. We can see that the files we created are gone.
 
+```bash
+$ git stash
+> Saved working directory and index state WIP on gh-pages: 8741e43 fix date
+> HEAD is now at 111111 fixing things
+$ git status
+> # On branch origin
+> nothing to commit, working directory clean
   ```
-  $ git stash
-  > Saved working directory and index state WIP on gh-pages: 8741e43 fix date
-  > HEAD is now at 111111 fixing things
-  $ git status
-  > # On branch origin
-  > nothing to commit, working directory clean
-  ```
+
 6. In this step you guys free to add/change/modify any files.
 
 5. Now let's do a `git stash apply`. Now we can see that the files have been added
 
-  ```
-  $ git stash apply
-  ># On branch gh-pages
-  ># Changes to be committed:
-  >#   (use "git reset HEAD <file>..." to unstage)
-  >#
-  >#  new file:   sample1.txt
-  >#  new file:   sample2.txt
-  >#
-  ```
-
-
-
+```bash
+$ git stash apply
+># On branch gh-pages
+># Changes to be committed:
+>#   (use "git reset HEAD <file>..." to unstage)
+>#
+>#  new file:   sample1.txt
+>#  new file:   sample2.txt
+>#
+```
 
 
 https://help.github.com/articles/generating-ssh-keys
-
 http://git-scm.com/
 http://git-scm.com/book/en/Getting-Started-About-Version-Control
-
 http://en.wikipedia.org/wiki/Revision_control
