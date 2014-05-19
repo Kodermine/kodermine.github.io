@@ -116,5 +116,6 @@ DEPENDENCIES
   jekyll-assets
   maruku
   rake
+  redcarpet
   sass
   uglifier
