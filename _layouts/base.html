@@ -42,6 +42,11 @@
             {% endfor %}
             {% if site.inc.about_link %}<a href="{{ site.inc.about_link }}">About</a>{% endif %}
         </nav>
+
+        <nav class="tagline">
+            <span>Contribute to our Blog</span>
+            <a href="/submitting_posts" class="btn btn-outline">Submit a Post</a>
+        </nav>
     </header>
 </section>
 
@@ -54,7 +59,7 @@
         <nav>
             <a href="{{ site.inc.url }}">{{ site.inc.company }}</a> &middot;
             <a href="/">Blog</a> &middot;
-            {% if site.inc.product_link %}<a href="{{ site.inc.product_link }}">Product</a> &middot; {% endif %}
+            <a href="/submitting_posts">Submit a Post</a>
             {% if site.inc.about_link %}<a href="{{ site.inc.about_link }}">About</a>{% endif %}
         </nav>
 
