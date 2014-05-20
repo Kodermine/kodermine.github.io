@@ -95,10 +95,14 @@ article {
         padding:0;
 
         p {
-            font-size:30px;
-            line-height:1.1;
-            color:$accent;
+            font-size:15px;
+            line-height:1.5;
+            color: #777;
             font-weight:600;
+            font-style: italic;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-left: 3px solid #777;
         }
     }
 
