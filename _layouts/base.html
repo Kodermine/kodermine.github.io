@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if page.title %}{{ page.title }} &mdash; {{ site.inc.title }}{% else %}{{ site.inc.title }} &mdash; {{ site.inc.subtitle }}{% endif %}</title>
+    {% if site.inc.google_font %}<link href="https://fonts.googleapis.com/css?family={{ site.inc.google_font }}" rel="stylesheet" type="text/css">{% endif %}
+    {{ 'main' | stylesheet }}
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/images/{{ site.inc.logo }}"/>
+    <link href="{{ site_url }}/feed.xml" rel="alternate" type="application/rss+xml" title="{{ site.inc.title }}" />
+    <meta name="title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    {% if page.site.gplus %}<link rel="publisher" href="https://plus.google.com/{{ site.inc.gplus }}">{% endif %}
+    {% if page.author.gplus %}<link rel="author" href="https://plus.google.com/{{ page.author.gplus }}">{% endif %}
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} {% else %}{{ site.inc.title }}{% endif %}"/>
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    {% if page.cover_image %}
+    <meta property="og:image" content="{{ site.url }}/images/{{ page.cover_image }}"/>
+    {% elsif page.main_image %}
+    <meta property="og:image" content="{{ site.url }}/images/{{ page.main_image }}"/>
+    {% else %}
+    <meta property="og:image" content="http://s3.amazonaws.com/landmhel/uploads/kodermine_twitter_card.png"/>
+    {% endif %}
+
+    <meta property="og:description" content="{% if page.excerpt %} {{ page.excerpt }} {% else %} Kodermine is an online community that provides resources, help, and guides for people who are interested in Programming and Web Development. {% endif %}"/>
+    <meta name="description" content="{% if page.excerpt %} {{ page.excerpt }} {% else %} Kodermine is an online community that provides resources, help, and guides for people who are interested in Programming and Web Development. {% endif %}"/>
+
+    <meta property="og:site_name" content="{{ site.inc.title }}">
+    <meta name="description" content="Kodermine is an online community that provides resources, help, and guides for people who are interested in Programming and Web Development.">
+    <meta name="keywords" content="programmers, coders, tutorials, online community, community, programming help, programming tutorials, coding sessions, kodermine, koder, mine, kodermine group, kodermine community, ruby tutorials, git tutorials, php tutorials, programming languages, web development, web programming, web, ruby, php, programming">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@kodermine">
+    <meta name="twitter:title" content="Kodermine: Videos, Live Hangouts, Code Sessions">
+    <meta name="twitter:description" content="We’re a community that provides help and guidance to people that are interested in learning more about Programming and Web Development.">
+    <meta name="twitter:creator" content="@kodermine">
+    <meta name="twitter:image:src" content="http://s3.amazonaws.com/landmhel/uploads/kodermine_twitter_card.png">
+    <meta name="twitter:domain" content="kodermine.com">
+</head>
+<body>
+
+<section class="site-nav">
+    <header>
+        <nav id="navigation">
+            <a class="brand" href="/">
+                <img src="/images/{{ site.inc.logo }}" alt="Inc">
+            </a>
+            <a href="/" class="home">Home</a>
+            {% for category in site.categories %}
+                <a href="/categories/{{category[0]}}" >{{ category[0] | capitalize }}</a>
+            {% endfor %}
+            {% if site.inc.about_link %}<a href="{{ site.inc.about_link }}">About</a>{% endif %}
+        </nav>
+
+        <nav class="tagline">
+            <span>Contribute to our Blog</span>
+            <a href="/submitting_posts" class="btn btn-outline">Submit a Post</a>
+        </nav>
+    </header>
+</section>
+
+{{ content }}
+
+<footer class="site-footer">
+    <div class="container">
+        &copy; {{ site.time | date: "%Y" }}
+
+        <nav>
+            <a href="{{ site.inc.url }}">{{ site.inc.company }}</a> &middot;
+            <a href="/">Blog</a> &middot;
+            <a href="/submitting_posts">Submit a Post</a>
+            {% if site.inc.about_link %}<a href="{{ site.inc.about_link }}">About</a>{% endif %}
+        </nav>
+
+        <nav class="social">
+            {% if site.inc.twitter %}
+            <a href="https://twitter.com/{{ site.inc.twitter }}" title="Follow on Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+            {% endif %}
+            {% if site.inc.facebook %}
+            <a href="http://facebook.com/{{ site.inc.facebook }}" title="Like on Facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+            {% endif %}
+            {% if site.inc.github %}
+            <a href="http://github.com/{{ site.inc.github }}" title="Follow on Github" target="_blank"><i class="fa fa-github"></i></a>
+            {% endif %}
+            <a href="/feed.xml" title="RSS Feed">
+                <i class="fa fa-rss"></i>
+            </a>
+        </nav>
+    </div>
+</footer>
+
+{% include _scripts.html %}
+
+</body>
+</html>
