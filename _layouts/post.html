@@ -7,7 +7,7 @@ layout: base
   <div>
     <img src="/images/{{ page.cover_image }}" class="image">
   </div>
-  {% else %}
+  {% elsif page.youtube %}
   <div class="tutorial-video">
     <div class="video-container">
         <iframe  width="560" height="349" src="//{{ page.youtube }}" frameborder="0" allowfullscreen></iframe>
