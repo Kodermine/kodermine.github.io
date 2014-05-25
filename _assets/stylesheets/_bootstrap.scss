@@ -1130,11 +1130,11 @@ textarea.input-lg {
     text-align: right;
   }
 }
-/*.btn {
+.btn {
   display: inline-block;
   padding: 6px 12px;
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: normal;
   line-height: 1.428571429;
   text-align: center;
@@ -1149,7 +1149,7 @@ textarea.input-lg {
   -o-user-select: none;
   user-select: none;
 }
-*/
+
 .btn:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
