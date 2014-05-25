@@ -190,7 +190,7 @@ and we can see how natural it feels to read the code.
 
 ### Unless statement
 
-This statement is pretty unique to Ruby, the sytax is similar to the `if` statement but it works the opposite(because unless is the opposite of if). If the passed value returns `false` the first statement will run, `unless` also supports `else` so if it returns true it will run the code inside the `else`
+This statement is pretty unique to Ruby, the syntax is similar to the `if` statement but it works the opposite(because unless is the opposite of if). If the passed value returns `false` the first statement will run, `unless` also supports `else` so if it returns true it will run the code inside the `else`
 
 ``` ruby
 time_to_drink_coffee = true
@@ -207,7 +207,7 @@ Did you notice that i didn't put `()` for passing arguments? Ruby allows us to l
 Let's read this like the if statement
 > Unless it's time to drink coffee then keep programming with Ruby, if yes(time to drink coffee) then go get coffee
 
-I admin sometimes unless statements gets pretty confusing sometimes. This is how I would use `if` and `unless`
+I admit sometimes unless statements gets pretty confusing sometimes. This is how I would use `if` and `unless`
 
 
 Instead of doing
