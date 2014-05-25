@@ -80,7 +80,7 @@ author:
   image: your_photo
 ---
 ```
-These are used by our templates to display information about the post the author.
+These are used by our templates to display information about the post and the author.
 
 ### Post information
 
@@ -121,7 +121,3 @@ You can now submit the post by clicking "Propose new file" on the bottom of the 
 
 
 All blog posts submitted will go through a review process, we will make comments on the proposal that you've made to inform you if it has been accepted or declined.
-
-
-
-
