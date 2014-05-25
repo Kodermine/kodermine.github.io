@@ -6,8 +6,8 @@
     <atom:link href="http://kodermine.com/feed.xml" rel="self" type="application/rss+xml" />
     <description></description>
     <language>en-us</language>
-    <pubDate>Tue, 20 May 2014 04:03:38 +0000</pubDate>
-    <lastBuildDate>Tue, 20 May 2014 04:03:38 +0000</lastBuildDate>
+    <pubDate>Sun, 25 May 2014 07:27:43 +0000</pubDate>
+    <lastBuildDate>Sun, 25 May 2014 07:27:43 +0000</lastBuildDate>
 
     
     
@@ -490,7 +490,7 @@ Hello World!&lt;/p&gt;
 
 &lt;h3&gt;Unless statement&lt;/h3&gt;
 
-&lt;p&gt;This statement is pretty unique to Ruby, the sytax is similar to the &lt;code&gt;if&lt;/code&gt; statement but it works the opposite(because unless is the opposite of if). If the passed value returns &lt;code&gt;false&lt;/code&gt; the first statement will run, &lt;code&gt;unless&lt;/code&gt; also supports &lt;code&gt;else&lt;/code&gt; so if it returns true it will run the code inside the &lt;code&gt;else&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;This statement is pretty unique to Ruby, the syntax is similar to the &lt;code&gt;if&lt;/code&gt; statement but it works the opposite(because unless is the opposite of if). If the passed value returns &lt;code&gt;false&lt;/code&gt; the first statement will run, &lt;code&gt;unless&lt;/code&gt; also supports &lt;code&gt;else&lt;/code&gt; so if it returns true it will run the code inside the &lt;code&gt;else&lt;/code&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;time_to_drink_coffee&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;time_to_drink_coffee&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;# keep programing with ruby&lt;/span&gt;
@@ -506,7 +506,7 @@ Hello World!&lt;/p&gt;
 &lt;p&gt;Unless it&amp;#39;s time to drink coffee then keep programming with Ruby, if yes(time to drink coffee) then go get coffee&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;I admin sometimes unless statements gets pretty confusing sometimes. This is how I would use &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;unless&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;I admit sometimes unless statements gets pretty confusing sometimes. This is how I would use &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;unless&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Instead of doing&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;ruby language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;time_to_go_out&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
