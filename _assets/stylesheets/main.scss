@@ -34,8 +34,6 @@ $accent: #2077b2;
 @import "stacked";
 @import "icons";
 
-
-
 .tutorial-video {
   max-height: 1000px !important;
   @media screen and (min-width: 1000px) {
@@ -45,4 +43,12 @@ $accent: #2077b2;
   @media screen and (max-width: 999px) {
     margin: 0px;
   }
+}
+
+.avatar {
+  border-radius: 54px;
+  width: 100px;
+  height: 100px;
+  margin: 0 20px 0 0;
+  float: left;
 }
