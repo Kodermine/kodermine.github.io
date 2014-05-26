@@ -79,7 +79,7 @@ author:
   image: your_photo
 ---
 ```
-These are used by our templates to display information about the author of the post.
+These are used by our templates to display information about the author and the post.
 
 ### Post information
 
