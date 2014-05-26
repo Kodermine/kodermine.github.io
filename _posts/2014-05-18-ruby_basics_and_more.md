@@ -3,7 +3,7 @@ layout: post
 
 title: Ruby basics and more
 subtitle: "Learning more about ruby methods and data structures."
-youtube: www.youtube.com/embed/ZTFaM2ITpjE
+youtube: www.youtube.com/embed/yDTV_bfl9oM
 excerpt: "We're going to learn about user input, methods, symbols and hashes."
 category: "ruby"
 

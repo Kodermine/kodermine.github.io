@@ -3,7 +3,7 @@ layout: post
 
 title: Cool stuff with Git
 subtitle: "Cool stuff with Git."
-youtube: www.youtube.com/embed/ZTFaM2ITpjE
+youtube: www.youtube.com/embed/tBm1b4nQWXk
 excerpt: "We're going to be learning about cool things that we can do with Git and Github"
 category: "git"
 
