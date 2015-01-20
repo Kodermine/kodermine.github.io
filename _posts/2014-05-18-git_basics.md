@@ -38,6 +38,7 @@ Hello Everyone, this is the shownotes that comes with the Git Basics hangout tha
   * `git reset`
   * `git checkout`
   * `git branch`
+  * `git clone`
 
 * Git Tips
   * using wildcards
@@ -217,6 +218,24 @@ So if I want to remove `origin` I will do `git remote rm origin`.
 ### Git push
 
 Git push allows us to `push` and copies our last changes into the remote repository that we created. The changes that are going to be copied are only the ones that are commited.
+
+### Git Clone
+
+<b>git clone</b> Clones a repository into a newly created directory, creates remote-tracking branches for each branch in the cloned repository (visible using git branch -r), and creates and checks out an initial branch that is forked from the cloned repository’s currently active branch.
+
+######usage
+```bash
+  git clone <repsitory link>
+```
+Try It Example
+
+```bash
+  git clone https://github.com/argunner/blinkTitle.js.git
+  cd blinkTitle.js
+  ls -a
+```
+
+Read more about <b>git clone</b>[Here!](http://git-scm.com/docs/git-clone)
 
 
 ### Git stash.
